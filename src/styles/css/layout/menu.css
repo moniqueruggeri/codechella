@@ -1,0 +1,20 @@
+/* Cores */
+/* Fonts */
+/* Pesos */
+/* Tamnanhos */
+header {
+  background-color: #FF4500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+header .menuIcon {
+  font-size: 2rem;
+  color: #F5F5F5;
+}
+header .menuList {
+  display: none;
+}
+
+/*# sourceMappingURL=menu.css.map */

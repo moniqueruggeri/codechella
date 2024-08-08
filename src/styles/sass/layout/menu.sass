@@ -1,0 +1,16 @@
+@use '../variables/_variables-colors' as colors
+@use '../variables/_variables-text' as text
+
+header
+    background-color: colors.$red
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 1rem
+
+    .menuIcon
+        font-size: text.$titles-text
+        color: colors.$white
+
+    .menuList
+        display: none
