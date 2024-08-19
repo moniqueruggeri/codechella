@@ -2,6 +2,7 @@
 @use './variables/_variables-text' as text
 
 .bannerHeader
+    position: relative
 
     .bannerBg
         background-image: url('../../assets/img/banner-1-mb.png')
@@ -19,7 +20,7 @@
         left: 0
         height: 50vh
         width: 100%
-        overflow-x: hidden 
+        overflow-x: hidden
 
     .headerContainer
         position: relative
@@ -198,13 +199,15 @@
 
     .domingo
         h2
+            position: absolute
+            right: -213px
             transform: translateY(-50%) rotate(90deg)
-            right: -220px
             color: color.$blue
 
         .domingoLineUp
+            position: relative
             text-align: right
-            margin-right: 40px
+
 
     .bannerButton
         background-image: url('../../assets/img/bg-footer-mb.png')

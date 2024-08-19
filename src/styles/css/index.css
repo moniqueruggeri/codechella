@@ -2,6 +2,9 @@
 /* Fonts */
 /* Pesos */
 /* Tamnanhos */
+.bannerHeader {
+  position: relative;
+}
 .bannerHeader .bannerBg {
   background-image: url("../../assets/img/banner-1-mb.png");
   background-position: center;
@@ -216,13 +219,14 @@
   text-align: left;
 }
 .lineUp .domingo h2 {
+  position: absolute;
+  right: -213px;
   transform: translateY(-50%) rotate(90deg);
-  right: -220px;
   color: #4682B4;
 }
 .lineUp .domingo .domingoLineUp {
+  position: relative;
   text-align: right;
-  margin-right: 40px;
 }
 .lineUp .bannerButton {
   background-image: url("../../assets/img/bg-footer-mb.png");

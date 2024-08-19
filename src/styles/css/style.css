@@ -35,13 +35,67 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  transition: top 0.3s ease-in-out;
+  position: fixed;
+  width: 100vw;
+  top: -100px;
+  left: 0;
+  z-index: 2;
+  overflow-x: hidden;
 }
-header .menuIcon {
+header.hidden {
+  top: -6.25rem;
+  transform: translateY(-100%);
+  pointer-events: none;
+}
+header.visible {
+  top: 0;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+header.visible img {
+  width: 40%;
+}
+header.visible .menuList {
+  z-index: 3;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #FF4500;
+  padding: 2rem 1rem;
+  color: #F5F5F5;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  align-items: center;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  display: none;
+}
+header.visible .menuList.open {
+  display: flex;
+}
+header.visible .menuList.open .menuItem {
+  border-bottom: 2px solid #4682B4;
+  padding: 12px 0;
+}
+header.visible .menuList.open .menuItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+header.visible .menuList.open .menuItem:first-child {
+  padding-top: 0;
+}
+header.visible .menuList.closed {
+  display: none;
+}
+header.visible .menuIcon {
   font-size: 2rem;
   color: #F5F5F5;
-}
-header .menuList {
-  display: none;
+  position: relative;
+  padding-right: 30px;
 }
 
 /* Fonts */
@@ -95,6 +149,9 @@ header .menuList {
 /* Fonts */
 /* Pesos */
 /* Tamnanhos */
+.bannerHeader {
+  position: relative;
+}
 .bannerHeader .bannerBg {
   background-image: url("../../assets/img/banner-1-mb.png");
   background-position: center;
@@ -309,13 +366,14 @@ header .menuList {
   text-align: left;
 }
 .lineUp .domingo h2 {
+  position: absolute;
+  right: -213px;
   transform: translateY(-50%) rotate(90deg);
-  right: -220px;
   color: #4682B4;
 }
 .lineUp .domingo .domingoLineUp {
+  position: relative;
   text-align: right;
-  margin-right: 40px;
 }
 .lineUp .bannerButton {
   background-image: url("../../assets/img/bg-footer-mb.png");
@@ -342,6 +400,7 @@ body {
   background-color: #E9E9E9;
   line-height: 1.1875rem;
   overflow-x: hidden;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

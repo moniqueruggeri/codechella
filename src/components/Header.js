@@ -1,27 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from '../assets/img/small-logo.svg';
 import 'material-icons/iconfont/material-icons.css';
-
+import Menu from './Menu';
 
 function Header() {
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY
+
+      if (scrollPosition > 50) {
+        setIsVisible(true)
+      }else {
+        setIsVisible(false)
+      }
+    }
+  
+  window.addEventListener('scroll', handleScroll)
+
+  return () => {
+    window.removeEventListener('scroll', handleScroll)
+  }
+}, [])
+
   return (
-    <header className="header">
+    <header className={`header ${isVisible ? 'visible' : 'hidden'}`}>
       <img src={logo} alt="logo" />
-      <i className="material-icons menuIcon">menu</i>
-      <nav className="menuList">
-        <a className="menuItem" href="#">
-          A experiência
-        </a>
-        <a className="menuItem" href="#">
-          Mapa de setores
-        </a>
-        <a className="menuItem" href="#">
-          Ingresso
-        </a>
-        <a className="menuItem" href="#">
-          FAQ
-        </a>
-      </nav>
+      <Menu/>
     </header>
   );
 }

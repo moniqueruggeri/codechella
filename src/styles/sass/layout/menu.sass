@@ -7,10 +7,65 @@ header
     justify-content: space-between
     align-items: center
     padding: 1rem
+    transition: top 0.3s ease-in-out
+    position: fixed
+    width: 100vw
+    top: -100px
+    left: 0
+    z-index: 2
+    overflow-x: hidden
 
-    .menuIcon
-        font-size: text.$titles-text
-        color: colors.$white
+    &.hidden
+        top: -6.25rem
+        transform: translateY(-100%)
+        pointer-events: none
 
-    .menuList
-        display: none
+    &.visible
+        top: 0
+        transform: translateY(0)
+        pointer-events: auto
+
+        img
+            width: 40%
+
+
+        .menuList
+            z-index: 3
+            flex-direction: column
+            position: absolute
+            top: 100%
+            right: 0
+            background-color: colors.$red
+            padding: 2rem 1rem
+            color: colors.$white
+            text-transform: uppercase
+            font-family: text.$title-font
+            font-weight: text.$bold
+            align-items: center
+            width: 100%
+            max-width: 100vw
+            overflow-x: hidden
+            display: none
+
+            &.open
+                display: flex
+
+                .menuItem
+                    border-bottom: 2px solid colors.$blue
+                    padding: 12px 0
+
+                    &:last-child
+                        border-bottom: none
+                        padding-bottom: 0
+
+                    &:first-child
+                        padding-top: 0
+
+            &.closed
+                display: none
+
+        .menuIcon
+            font-size: text.$titles-text
+            color: colors.$white
+            position: relative
+            padding-right: 30px
