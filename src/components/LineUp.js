@@ -39,7 +39,7 @@ const LineUp = () => {
   ];
 
   return (
-    <section class="lineUp">
+    <section className="lineUp">
       <LineUpBanner />
       <div className="sabado">
         <h2>Sábado 10</h2>
@@ -49,8 +49,8 @@ const LineUp = () => {
         <h2>Domingo 11</h2>
         <BandsList bands={dominogBands} />
       </div>
-      <div class="bannerButton">
-        <Button text="Garanta já o seu!" href="/ingresso" className="button"/>
+      <div className="bannerButton">
+        <Button text="Garanta já o seu!" link="/ingresso" className="button"/>
       </div>
     </section>
   );

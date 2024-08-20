@@ -5,13 +5,13 @@ import Button from './Button';
 
 function Banner() {
     return (
-        <section class="bannerHeader">
-        <div class="bannerBg">
+        <section className="bannerHeader">
+        <div className="bannerBg">
         </div>
-        <div class="headerContainer">
+        <div className="headerContainer">
           <img src={mainLogo} alt="Logo CodeChella" />
-          <Button text="Compre agora!" href="/ingresso" className="button buttonHeader"/>
-          <div class="bannerDate">
+          <Button text="Compre agora!" link="/ingresso" className="button buttonHeader"/>
+          <div className="bannerDate">
             <h1>&lt; <span>10</span>&&<span>11</span>/ &gt;</h1>
             <h2>de agosto</h2>
           </div>

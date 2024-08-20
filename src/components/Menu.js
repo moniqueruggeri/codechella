@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Button from "./Button";
+import { Link, NavLink } from "react-router-dom";
 
 const Menu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,19 +12,17 @@ const Menu = () => {
 
   return (
     <>
-      <i className="material-icons menuIcon" onClick={toggleMenu}>menu</i>
-      <nav className={`menuList ${isMenuOpen ? "open" : "closed"}`} >
-        <Button text="A experiência" className="menuItem" href="/experiencia" />
-        <Button
-          text="Mapa de setores"
-          className="menuItem"
-          href="/mapadesetores"
-        />
-        <Button text="Ingresso" className="menuItem" href="/ingresso" />
-        <Button text="FAQ" className="menuItem" href="/faq" />
-      </nav>
+      <i className="material-icons menuIcon" onClick={toggleMenu}>
+        menu
+      </i>
+        <nav className={`menuList ${isMenuOpen ? "open" : "closed"}`}>
+          <Link to="/Experiencia" className="menuItem"> A Experiência </Link>
+          <Link to="/MapaDeSetores" className="menuItem">Mapa de Setores </Link>
+          <Link to="/Ingresso" className="menuItem"> Ingresso </Link> 
+          <Link to="/Faq" className="menuItem"> FAQ </Link> 
+        </nav>
     </>
   );
 };
 
-export default Menu
+export default Menu;
