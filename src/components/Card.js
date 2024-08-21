@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./Button";
+// import Button from "./Button";
 
 const Card = ({ icon, text, title, link}) => {
 const iconClass = title === "Camping" ? "material-symbols-outlined" : "material-icons"
@@ -11,7 +11,7 @@ const iconClass = title === "Camping" ? "material-symbols-outlined" : "material-
                  <h2>{title}</h2>
             </div>
             <p className="textParagraph">{text}</p>
-            <Button text="Ingresso" href="/Ingresso" className="button"/>
+            {/* <Button text="Ingresso" href="/Ingresso" className="button"/> */}
         </div>
     )
 }

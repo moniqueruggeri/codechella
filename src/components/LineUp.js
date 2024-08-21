@@ -50,7 +50,7 @@ const LineUp = () => {
         <BandsList bands={dominogBands} />
       </div>
       <div className="bannerButton">
-        <Button text="Garanta já o seu!" link="/ingresso" className="button"/>
+        {/* <Button text="Garanta já o seu!" link="/ingresso" className="button"/> */}
       </div>
     </section>
   );

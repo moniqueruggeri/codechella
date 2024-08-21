@@ -1,6 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Button from "./Button";
-import { Link, NavLink } from "react-router-dom";
 
 const Menu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,12 +15,15 @@ const Menu = () => {
       <i className="material-icons menuIcon" onClick={toggleMenu}>
         menu
       </i>
-        <nav className={`menuList ${isMenuOpen ? "open" : "closed"}`}>
-          <Link to="/Experiencia" className="menuItem"> A Experiência </Link>
-          <Link to="/MapaDeSetores" className="menuItem">Mapa de Setores </Link>
-          <Link to="/Ingresso" className="menuItem"> Ingresso </Link> 
-          <Link to="/Faq" className="menuItem"> FAQ </Link> 
-        </nav>
+      <nav className={`menuList ${isMenuOpen ? "open" : "closed"}`}>
+        <Button text="A Experiência" className="menuItem" link="/experiencia" />
+
+        <Button text="Mapa de Setores" className="menuItem" link="/mapadesetores"/>
+
+        <Button text="Ingresso" className="menuItem" link="/ingresso" />
+
+        <Button text="Faq" className="menuItem" link="/faq"/>
+      </nav>
     </>
   );
 };

@@ -1,7 +1,15 @@
-function Faq (){
-    return (
-        <h2>FAQ</h2>
-    )
+import React from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+
+function Faq() {
+  return (
+    <>
+      <Header />
+
+      <Footer />
+    </>
+  );
 }
 
-export default Faq
+export default Faq;

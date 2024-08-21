@@ -1,7 +1,15 @@
+import React from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+
 function Ingresso() {
-    return (
-        <h2>Ingresso</h2>
-    )
+  return (
+    <>
+      <Header />
+
+      <Footer />
+    </>
+  );
 }
 
-export default Ingresso
+export default Ingresso;

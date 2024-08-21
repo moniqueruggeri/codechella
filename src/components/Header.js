@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import logo from "../assets/img/small-logo.svg";
 import "material-icons/iconfont/material-icons.css";
 import Menu from "./Menu";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [isVisible, setIsVisible] = useState(false);
@@ -26,7 +27,9 @@ function Header() {
 
   return (
     <header className={`header ${isVisible ? "visible" : "hidden"}`}>
-      <img src={logo} alt="logo" />
+      <Link to="/">
+        <img src={logo} alt="Codechella" />
+      </Link>
       <Menu />
     </header>
   );

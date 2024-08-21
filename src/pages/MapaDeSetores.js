@@ -1,9 +1,15 @@
-import React from "react"
+import React from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 function MapaDeSetores() {
-    return (
-        <h2>Mapa de Setores</h2>
-    )
+  return (
+    <>
+      <Header />
+
+      <Footer />
+    </>
+  );
 }
 
-export default MapaDeSetores
+export default MapaDeSetores;
