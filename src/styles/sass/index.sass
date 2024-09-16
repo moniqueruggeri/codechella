@@ -1,65 +1,43 @@
 @use './variables/_variables-colors' as color
 @use './variables/_variables-text' as text
 
-.bannerHeader
+.headerContainer
+    display: flex
     position: relative
+    gap: 24px
+    padding-top: 50px
 
-    .bannerBg
-        background-image: url('../../assets/img/banner-1-mb.png')
-        background-position: center
-        background-repeat: no-repeat
-        background-size: cover
-        padding-top: 72px
+    .imagesWrapper
+        display: flex
+        justify-content: flex-end
+
+    .buttonHeader
+        background-color: color.$yellow
+        color: color.$blue
+
+    .bannerDate
         text-align: center
+        line-height: 40px
         display: flex
         flex-direction: column
         justify-content: center
         align-items: center
-        gap: 1rem
-        position: absolute
-        left: 0
-        height: 50vh
-        width: 100%
-        overflow-x: hidden
+        padding-top: 110px
 
-    .headerContainer
-        position: relative
-        margin: auto
-        padding: 72px 32px 0 32px
-        display: flex
-        flex-direction: column
-        justify-content: center
-        align-items: center
-        gap: 24px
-        white-space: nowrap
+        h1
+            color: color.$white
+            font-family: text.$title-font
+            font-size: text.$banner-text
+            white-space: nowrap
 
-        .buttonHeader
-            background-color: color.$yellow
-            color: color.$blue
+            span
+                font-weight: text.$black
 
-        .bannerDate
-            text-align: center
-            line-height: 40px
-            display: flex
-            flex-direction: column
-            justify-content: center
-            align-items: center
-            padding-top: 110px
-
-            h1
-                color: color.$white
-                font-family: text.$title-font
-                font-size: text.$banner-text
-                white-space: nowrap
-
-                span
-                    font-weight: text.$black
-
-            h2
-                font-size: text.$ingresso-titles
-                font-weight: text.$bold
-                color: color.$white
-                text-transform: uppercase
+        h2
+            font-size: text.$ingresso-titles
+            font-weight: text.$bold
+            color: color.$white
+            text-transform: uppercase
 
 .cards
     .presentation
@@ -111,29 +89,13 @@
             color: color.$white
 
 .lineUp
-    display: flex
-    flex-direction: column
-    gap: 1rem
+    // display: flex
+    // flex-direction: column
+    // gap: 1rem
 
-    .lineUpBanner
-        background-image: url('../../assets/img/banner-2-mb.png')
-        background-repeat: no-repeat
-        background-size: cover
-        display: flex
-        align-items: center
-        justify-content: center
-        padding: 55px 32px 155px 32px
-
-        .lineUpTitle
-            line-height: 80%
-            font-size: text.$banner-text
-            text-transform: uppercase
-            font-weight: text.$black
-            color: color.$white
-
-        img
-            color: color.$yellow
-            width: 40%
+    img
+        color: color.$yellow
+        // width: 40%
 
     .sabado, .domingo
         display: flex
@@ -207,7 +169,6 @@
         .domingoLineUp
             position: relative
             text-align: right
-
 
     .bannerButton
         background-image: url('../../assets/img/bg-footer-mb.png')

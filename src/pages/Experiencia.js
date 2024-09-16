@@ -6,7 +6,7 @@ function Experiencia() {
   return (
     <>
       <Header />
-
+        
       <Footer />
     </>
   );

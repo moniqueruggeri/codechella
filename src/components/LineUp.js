@@ -1,8 +1,8 @@
 import React from "react";
 import BandsList from "./BandsList";
-import LineUpBanner from "./LineUpBanner";
 import Button from "./Button";
-
+import Banner from "./Banner";
+import chave from "../assets/img/chave.svg";
 
 const LineUp = () => {
   const sabadoBands = [
@@ -40,7 +40,12 @@ const LineUp = () => {
 
   return (
     <section className="lineUp">
-      <LineUpBanner />
+      <Banner
+        backgroundType="bannerBg lineUpBanner"
+        containerType="headerContainer lineUpBannerContainer"
+        images={[chave]}
+        showLineUpTitle={true}
+      />
       <div className="sabado">
         <h2>Sábado 10</h2>
         <BandsList bands={sabadoBands} />
@@ -50,7 +55,7 @@ const LineUp = () => {
         <BandsList bands={dominogBands} />
       </div>
       <div className="bannerButton">
-        {/* <Button text="Garanta já o seu!" link="/ingresso" className="button"/> */}
+        <Button text="Garanta já o seu!" link="/ingresso" className="button" />
       </div>
     </section>
   );
